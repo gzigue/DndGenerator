@@ -176,9 +176,9 @@ class MagicItems {
 			}
 			
 		} else if (hoardLevel >= 5) {
-			if (d100 == 100) {
+			if (d100 === 100) {
 				loot.push(this.tableH());
-			} else if (d100 == 99) {
+			} else if (d100 === 99) {
 				loot.push(this.tableH());
 			} else if (d100 >= 97) {
 				qty = roll.die(4);
@@ -198,7 +198,7 @@ class MagicItems {
 			} else if (d100 >= 81) {
 				qty = roll.die(4);
 				for (i=0; i<qty; i++) loot.push(this.tableF());
-			} else if (d100 == 80) {
+			} else if (d100 === 80) {
 				loot.push(this.tableD());
 			} else if (d100 >= 79) {
 				loot.push(this.tableD());
@@ -245,7 +245,7 @@ class MagicItems {
 			}
 						
 		} else {
-			if (d100 == 100) {
+			if (d100 === 100) {
 				loot.push(this.tableG());
 			} else if (d100 >= 98){
 				loot.push(this.tableG());
