@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+.header-cards-container div {
+  background-color: #664225;
+  padding: 18px 32px;
+  margin: 3px 12px;
+  min-width: 100px;
+}
+
+  

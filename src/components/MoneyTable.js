@@ -19,7 +19,7 @@ class MoneyTable extends React.Component {
         }
         
         return(
-            <div className="ui segment" style={{display:`${display}`}}>
+            <div className="card" style={{display:`${display}`}}>
                 <div className="ui yellow header">Money</div>
                 <table className="ui yellow table">
                     <thead>
