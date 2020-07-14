@@ -11,20 +11,3 @@ html body {
   margin-top: 5px;
   width: calc(100% - 50px);
 }
-
-.card {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0);
-  border-radius: 4px;
-}
-
-.card.clickable {
-  transition: box-shadow .1s ease-in;
-}
-
-.card.clickable:hover {
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-}

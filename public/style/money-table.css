@@ -1,0 +1,16 @@
+.money-table-content {
+}
+
+.money-table-content .money-table-content-items {
+    width: 100%;
+}
+
+.money-table-content .money-table-content-item {
+    height: 100px;
+    min-width: 140px;
+}
+
+.money-table-content .money-table-content-item-content {
+    font-size: 35px;
+    font-weight: 600;
+}

@@ -7,14 +7,12 @@
 .header-cards-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
-.header-cards-container div {
+.header-cards-container .item {
   background-color: #664225;
   padding: 18px 32px;
-  margin: 3px 12px;
   min-width: 100px;
 }
-
-  
+ 
