@@ -5,6 +5,7 @@ class MoneyTable extends React.Component {
     
     render() {
         let titles = ['Copper Pieces', 'Silver Pieces', 'Gold Pieces', 'Platinum Pieces']
+        let classes = ['cooper', 'silver', 'gold', 'platinum']
         var level = this.props.hoardLevel;
         var hoard = new TreasureHoard();
         var money = hoard.money(level);
@@ -26,8 +27,8 @@ class MoneyTable extends React.Component {
                     {
                         coins.map((coin, i) => {     
                             return (
-                                <div key={i} className="money-table-content-item card">
-                                    <div className="money-table-content-item-content card-content">
+                                <div key={i} className="money-table-content-item card card-bordered shadow-size-35px">
+                                    <div className={'money-table-content-item-content card-content ' + classes[i]}>
                                         {titles[i]}
                                     </div>
                                     <div className="card-footer-circle">{coin}</div>

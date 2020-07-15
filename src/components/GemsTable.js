@@ -31,7 +31,7 @@ class GemsTable extends React.Component {
                     {
                         rows.map((row, i) => {     
                             return (
-                                <div key={i} className="card">
+                                <div key={i} className="card card-bordered">
                                     <div className="gems-table-content-item card-content">
                                         <div>
                                             {row.value}
