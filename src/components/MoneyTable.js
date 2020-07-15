@@ -4,13 +4,14 @@ import TreasureHoard from '../treasure-generator/TreasureHoard';
 class MoneyTable extends React.Component {
     
     render() {
+        let titles = ['Copper Pieces', 'Silver Pieces', 'Gold Pieces', 'Platinum Pieces']
         var level = this.props.hoardLevel;
         var hoard = new TreasureHoard();
         var money = hoard.money(level);
         var coins = [];
 
         for (var m in money) {
-            coins.push(<td key={m}>{money[m]}</td>);
+            coins.push(money[m]);
         }
 
         var display='none';
@@ -19,23 +20,22 @@ class MoneyTable extends React.Component {
         }
         
         return(
-            <div className="ui segment" style={{display:`${display}`}}>
-                <div className="ui yellow header">Money</div>
-                <table className="ui yellow table">
-                    <thead>
-                        <tr>
-                            <th>Copper Pieces</th>
-                            <th>Silver Pieces</th>
-                            <th>Gold Pieces</th>
-                            <th>Platinum Pieces</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="warning">
-                            {coins}
-                        </tr>
-                    </tbody>
-                </table>
+            <div className="money-table-content card" style={{display:`${display}`}}>
+                <div className="card-title-line">Money</div>
+                <div className="card-content">
+                    {
+                        coins.map((coin, i) => {     
+                            return (
+                                <div key={i} className="money-table-content-item card">
+                                    <div className="money-table-content-item-content card-content">
+                                        {titles[i]}
+                                    </div>
+                                    <div className="card-footer-circle">{coin}</div>
+                                </div> 
+                            )
+                        })
+                    }
+                </div>
             </div>
         );
     };

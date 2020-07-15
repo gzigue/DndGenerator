@@ -34,8 +34,7 @@ class App extends React.Component {
     render() {
         var d100 = roll.die(100);
         return (
-            <div className="ui center aligned container">
-                <br/>
+            <div>
                 <Header onButtonClick={this.changeLevel}/>
                 <MoneyTable
                     hoardLevel={this.state.hoardLevel}

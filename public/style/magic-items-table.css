@@ -1,0 +1,9 @@
+.magic-items-table-content {
+}
+
+.magic-items-table-content .magic-items-table-content-item .item-content {
+    min-height: 100px;
+    min-width: 110px;
+    align-items: center;
+}
+

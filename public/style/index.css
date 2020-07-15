@@ -1,0 +1,16 @@
+html body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background: rgb(243,225,170);
+  background: radial-gradient(ellipse at center, 
+    rgb(241, 234, 210) 60%, 
+    rgba(243,225,170,1) 100%);
+}
+
+.root {
+  margin-top: 5px;
+  width: calc(100% - 50px);
+}

@@ -15,12 +15,7 @@ class MagicItemsTable extends React.Component {
 
         for (var item in magicItems) {
             var itemDetails = hoard.magicDetails(magicItems[item]);
-
-            var row = [];
-            for (var detail in itemDetails) {
-                row.push(<td key={detail}>{itemDetails[detail]}</td>);
-            }
-            rows.push(<tr className="positive" key={item}>{row}</tr>);
+            rows.push(itemDetails)
         }
 
         if (rows.length > 0 && displayMagic) {
@@ -28,19 +23,22 @@ class MagicItemsTable extends React.Component {
         }
 
         return(
-            <div className="ui segment" style={{display:`${display}`}}>
-                <div className="ui green header">Magic Items</div>
-                <table className="ui green table">
-                    <thead>
-                        <tr>
-                            <th>Quantity</th>
-                            <th>Item</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {rows}
-                    </tbody>
-                </table>
+            <div className="magic-items-table-content card" style={{display:`${display}`}}>
+                <div className="card-title-line">Magic Items</div>
+                <div className="card-content">
+                    {
+                        rows.map((row, i) => {
+                            return (
+                                <div key={i} className="magic-items-table-content-item card">
+                                    <div className="item-content card-content">
+                                        {row.description}
+                                    </div>
+                                    <div className="card-footer-circle">{row.quantity}</div>
+                                </div> 
+                            )
+                        })
+                    }
+                </div>
             </div>
         );
     };

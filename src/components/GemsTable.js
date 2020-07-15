@@ -16,32 +16,36 @@ class GemsTable extends React.Component {
         for (var item in gemsOrArt) {
             var itemDetails = hoard.gemDetails(gemsOrArt[item]);
 
-            var row = [];
-            for (var detail in itemDetails) {
-                row.push(<td key={detail}>{itemDetails[detail]}</td>);
-            }
-            rows.push(<tr className="negative" key={item}>{row}</tr>);
+            rows.push(itemDetails);
         }
+
 
         if (rows.length > 0 && displayGems) {
             display = 'block';
         }
 
         return(
-            <div className="ui segment" style={{display:`${display}`}}>
-                <div className="ui red header">Gems or Art Objects</div>
-                <table className="ui red table">
-                    <thead>
-                        <tr>
-                            <th>Quantity</th>
-                            <th>Item</th>
-                            <th>Value</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {rows}
-                    </tbody>
-                </table>
+            <div className="gems-table-content card"  style={{display:`${display}`}}>
+                <div className="card-title-line">Gems or Art Objects</div>
+                <div className="card-content">
+                    {
+                        rows.map((row, i) => {     
+                            return (
+                                <div key={i} className="card">
+                                    <div className="gems-table-content-item card-content">
+                                        <div>
+                                            {row.value}
+                                        </div>
+                                        <div>
+                                            {row.description}
+                                        </div>
+                                    </div>
+                                    <div className="card-footer-circle">{row.quantity}</div>
+                                </div> 
+                            )
+                        })
+                    }
+                </div>
             </div>
         );
     };

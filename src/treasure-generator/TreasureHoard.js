@@ -60,9 +60,13 @@ export class TreasureHoard {
 		}
 
 		var desc = details[1].split(" - ");
-		var array = [details[0], desc[0], desc[1]];
+		var detail = {
+			quantity: details[0],
+			description: desc[0],
+			value: desc[1]
+		};
 
-		return array;
+		return detail;
 	}
 	
 	magicItems(hoardLevel, d100) {
@@ -88,8 +92,11 @@ export class TreasureHoard {
 		if (details.length < 2) {
 			details.unshift("1");
 		}
-
-		return details;
+		
+		return {
+			quantity: details[0],
+			description: details[1]
+		};
 	}
 
 	countInArray(array, value) {
