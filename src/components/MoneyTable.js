@@ -22,7 +22,7 @@ class MoneyTable extends React.Component {
         return(
             <div className="money-table-content card">
                 <div className="card-title-line">Money</div>
-                <div className="money-table-content-items card-content">
+                <div className="card-content">
                     {
                         coins.map((coin, i) => {     
                             return (

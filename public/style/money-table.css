@@ -1,10 +1,6 @@
 .money-table-content {
 }
 
-.money-table-content .money-table-content-items {
-    width: 100%;
-}
-
 .money-table-content .money-table-content-item {
     display: flex;
 }

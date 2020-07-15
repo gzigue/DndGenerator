@@ -25,17 +25,15 @@ class MagicItemsTable extends React.Component {
         return(
             <div className="magic-items-table-content card">
                 <div className="card-title-line">Magic Items</div>
-                <div className="magic-items-table-content-items card-content">
+                <div className="card-content">
                     {
                         rows.map((row, i) => {
                             return (
                                 <div key={i} className="magic-items-table-content-item card">
-                                    <div className="item-quantity card-title">
-                                        {row.quantity}
-                                    </div>
                                     <div className="item-content card-content">
                                         {row.description}
                                     </div>
+                                    <div className="card-footer-circle">{row.quantity}</div>
                                 </div> 
                             )
                         })
