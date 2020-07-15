@@ -6,17 +6,17 @@
 }
 
 .gems-table-content .gems-table-content-item {
-    height: 100px;
+    height: 130px;
     width: 180px;
-}
-
-.gems-table-content .gems-table-content-item .item-quantity {
-    font-weight: 600;
-}
-
-.gems-table-content .gems-table-content-item .item-description {
-    width: 100%;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 3px;
+    flex-direction: column;
+}
+
+.gems-table-content .gems-table-content-item div:nth-child(1) {
+    align-self: center;
+    padding-bottom: 5px;
+}
+
+.gems-table-content .gems-table-content-item div:nth-child(2) {
+    flex-grow: 1;
 }
