@@ -420,7 +420,7 @@ class MagicItems {
 		} else if (d100 >= 73) {
 			return "Elixir of health";
 		} else if (d100 >= 68) {
-			return "Spell scroll (5thlevel: " + this.spell5();
+			return "Spell scroll (5thlevel): " + this.spell5();
 		} else if (d100 >= 63) {
 			return "Potion of mind reading";
 		} else if (d100 >= 58) {
