@@ -23,7 +23,7 @@ class MagicItemsTable extends React.Component {
         }
 
         return(
-            <div className="magic-items-table-content card">
+            <div className="magic-items-table-content card" style={{display:`${display}`}}>
                 <div className="card-title-line">Magic Items</div>
                 <div className="card-content">
                     {

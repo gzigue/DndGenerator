@@ -20,7 +20,7 @@ class MoneyTable extends React.Component {
         }
         
         return(
-            <div className="money-table-content card">
+            <div className="money-table-content card" style={{display:`${display}`}}>
                 <div className="card-title-line">Money</div>
                 <div className="card-content">
                     {

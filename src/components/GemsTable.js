@@ -25,7 +25,7 @@ class GemsTable extends React.Component {
         }
 
         return(
-            <div className="gems-table-content card">
+            <div className="gems-table-content card"  style={{display:`${display}`}}>
                 <div className="card-title-line">Gems or Art Objects</div>
                 <div className="card-content">
                     {
