@@ -92,8 +92,11 @@ export class TreasureHoard {
 		if (details.length < 2) {
 			details.unshift("1");
 		}
-
-		return details;
+		
+		return {
+			quantity: details[0],
+			description: details[1]
+		};
 	}
 
 	countInArray(array, value) {

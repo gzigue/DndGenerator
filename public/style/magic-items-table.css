@@ -1,0 +1,22 @@
+.magic-items-table-content {
+}
+
+.magic-items-table-content .magic-items-table-content-items {
+    width: 100%;
+}
+
+.magic-items-table-content .magic-items-table-content-item {
+    height: 100px;
+    width: 180px;
+}
+
+.magic-items-table-content .magic-items-table-content-item .item-quantity {
+    font-weight: 600;
+}
+
+.magic-items-table-content .magic-items-table-content-item .item-description {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3px;
+}
