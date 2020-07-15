@@ -4,7 +4,10 @@ html body {
   margin: 0;
   display: flex;
   justify-content: center;
-  background-color: #f3e1aa;
+  background: rgb(243,225,170);
+  background: radial-gradient(ellipse at center, 
+    rgb(241, 234, 210) 60%, 
+    rgba(243,225,170,1) 100%);
 }
 
 .root {

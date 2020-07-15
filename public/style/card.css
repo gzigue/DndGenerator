@@ -2,12 +2,56 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, .4);
-    border-radius: 4px;
-    margin: 3px;
-    padding: 7px;
+
+    margin: 4px;
+
     min-width: 30px;
     align-items: flex-start;
+    border: 0px solid rgba(0, 0, 0, .4);
+    border-radius: 4px;
+}
+
+.card .card-title {
+    display: flex;
+    width: 100%;
+    font-size: large;
+    padding-left: 5px;
+}
+
+.card .card-title-line {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: large;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.card .card-title-line:before,
+.card .card-title-line:after {
+    background-color: rgba(0, 0, 0, 0.4);
+    content: "";
+    height: 1px;
+    position: relative;
+    width: 50%;
+}
+.card .card-title-line:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+.card .card-title-line:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.card .card-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    border: 1px solid rgba(0, 0, 0, .4);
+    border-radius: 4px;
+    padding: 3px 7px;
 }
 
 .card.clickable {
@@ -19,20 +63,21 @@
     cursor: pointer;
 }
 
-.card .card-title {
-    display: flex;
-    width: 100%;
-    font-size: large;
-    padding-left: 5px;
-}
+.card .card-footer-circle {
+    background-color: #f1ead2;
 
-.card .card-content {
-    height: 100%;
-    width: 100%;
-    
     display: flex;
-    flex-wrap: wrap;
     align-self: center;
-    align-content: center;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    
+    border: 2px solid rgba(0, 0, 0, .4);
+    border-radius: 50%;
+    padding: 3px;
+
+    height: 25px;
+    width: 25px;
+    position: relative;
+    top: -18px;
+    font-weight: 600;
 }

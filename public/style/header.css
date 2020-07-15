@@ -2,17 +2,22 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 15px;
 }
 
 .header-cards-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  height: 100%;
 }
 
 .header-cards-container .item {
-  background-color: #664225;
-  padding: 18px 32px;
+  background-color: #97663d;
+  /* padding: 8px 32px; */
   min-width: 100px;
+  font-size: 30px;
+  font-weight: 600;
 }
  

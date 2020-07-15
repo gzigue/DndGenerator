@@ -21,16 +21,16 @@ class MoneyTable extends React.Component {
         
         return(
             <div className="money-table-content card">
-                <div className="card-title">Money</div>
+                <div className="card-title-line">Money</div>
                 <div className="money-table-content-items card-content">
                     {
                         coins.map((coin, i) => {     
                             return (
                                 <div key={i} className="money-table-content-item card">
-                                    <div className="card-title">{titles[i]}</div>
                                     <div className="money-table-content-item-content card-content">
-                                        {coin}
+                                        {titles[i]}
                                     </div>
+                                    <div className="card-footer-circle">{coin}</div>
                                 </div> 
                             )
                         })
@@ -38,22 +38,6 @@ class MoneyTable extends React.Component {
                 </div>
             </div>
         );
-            // <div className="card" style={{display:`${display}`}}>
-            //     <div className="ui yellow header">Money</div>
-            //     <table className="ui yellow table">
-            //         <thead>
-            //             <tr>
-            //                 <th></th>
-            //                 <th></th>
-            //             </tr>
-            //         </thead>
-            //         <tbody>
-            //             <tr className="warning">
-            //                 {coins}
-            //             </tr>
-            //         </tbody>
-            //     </table>
-            // </div>
     };
 }
 

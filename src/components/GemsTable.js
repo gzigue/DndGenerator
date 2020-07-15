@@ -26,7 +26,7 @@ class GemsTable extends React.Component {
 
         return(
             <div className="gems-table-content card">
-                <div className="card-title">Gems or Art Objects</div>
+                <div className="card-title-line">Gems or Art Objects</div>
                 <div className="gems-table-content-items card-content">
                     {
                         rows.map((row, i) => {     
