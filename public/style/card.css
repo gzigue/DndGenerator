@@ -19,9 +19,12 @@
 .card .card-title-line {
     display: flex;
     justify-content: center;
+    
     font-size: x-large;
     margin-bottom: 5px;
     margin-top: 25px;
+
+    overflow: hidden;
 }
 
 .card .card-title-line:before,
