@@ -14,22 +14,22 @@ export class TreasureHoard {
 		if (hoardLevel>16) {
 			coin.push(0);
 			coin.push(0);
-			coin.push(roll.die(6, 12)*1000);
-			coin.push(roll.die(6, 8)*1000);
+			coin.push(roll.dice(6, 12)*1000);
+			coin.push(roll.dice(6, 8)*1000);
 		} else if (hoardLevel>10) {
 			coin.push(0);
 			coin.push(0);
-			coin.push(roll.die(6, 4)*1000);
-			coin.push(roll.die(6, 5)*100);
+			coin.push(roll.dice(6, 4)*1000);
+			coin.push(roll.dice(6, 5)*100);
 		} else if (hoardLevel>4) {
-			coin.push(roll.die(6, 2)*100);
-			coin.push(roll.die(6, 2)*1000);
-			coin.push(roll.die(6, 6)*100);
-			coin.push(roll.die(6, 3)*10);
+			coin.push(roll.dice(6, 2)*100);
+			coin.push(roll.dice(6, 2)*1000);
+			coin.push(roll.dice(6, 6)*100);
+			coin.push(roll.dice(6, 3)*10);
 		} else {
-			coin.push(roll.die(6, 6)*100);
-			coin.push(roll.die(6, 3)*100);
-			coin.push(roll.die(6, 2)*10);
+			coin.push(roll.dice(6, 6)*100);
+			coin.push(roll.dice(6, 3)*100);
+			coin.push(roll.dice(6, 2)*10);
 			coin.push(0);
 		}
 		return coin;

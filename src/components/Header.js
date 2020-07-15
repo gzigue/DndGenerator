@@ -6,22 +6,22 @@ class Header extends React.Component {
             <div className="header">
                 <h1>Hoard Level</h1>
                 <div className="header-cards-container">
-                    <div className="card clickable" 
+                    <button 
                         onClick={(e) => this.props.onButtonClick(0)}>
-                        <div className="item card-content">0-4</div>
-                    </div>
-                    <div className="card clickable" 
+                        0-4
+                    </button>
+                    <button 
                         onClick={(e) => this.props.onButtonClick(5)}>
-                        <div className="item card-content">5-10</div>
-                    </div>
-                    <div className="card clickable" 
+                        5-10
+                    </button>
+                    <button 
                         onClick={(e) => this.props.onButtonClick(11)}>
-                        <div className="item card-content">11-16</div>
-                    </div>
-                    <div className="card clickable" 
+                        11-16
+                    </button>
+                    <button 
                         onClick={(e) => this.props.onButtonClick(17)}>
-                        <div className="item card-content">17+</div>
-                    </div>
+                        17+
+                    </button>
                 </div>
             </div>
         );

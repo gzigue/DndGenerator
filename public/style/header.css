@@ -19,4 +19,24 @@
   font-size: 30px;
   font-weight: 600;
 }
- 
+
+button {
+  margin: 5px;
+  background-color: #97663d;
+  border-radius: 10px;
+  font-size: xx-large;
+  font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
+  width: 100px;
+  height: 45px;
+}
+
+button:focus {
+  background-color: brown;
+  outline: 0 !important;
+}
+
+button:hover {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
