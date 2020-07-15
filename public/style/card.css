@@ -20,6 +20,7 @@
 }
 
 .card .card-title {
+    display: flex;
     width: 100%;
     font-size: large;
     padding-left: 5px;

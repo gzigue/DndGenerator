@@ -60,9 +60,13 @@ export class TreasureHoard {
 		}
 
 		var desc = details[1].split(" - ");
-		var array = [details[0], desc[0], desc[1]];
+		var detail = {
+			quantity: details[0],
+			description: desc[0],
+			value: desc[1]
+		};
 
-		return array;
+		return detail;
 	}
 	
 	magicItems(hoardLevel, d100) {

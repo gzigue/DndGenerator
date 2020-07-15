@@ -16,32 +16,36 @@ class GemsTable extends React.Component {
         for (var item in gemsOrArt) {
             var itemDetails = hoard.gemDetails(gemsOrArt[item]);
 
-            var row = [];
-            for (var detail in itemDetails) {
-                row.push(<td key={detail}>{itemDetails[detail]}</td>);
-            }
-            rows.push(<tr className="negative" key={item}>{row}</tr>);
+            rows.push(itemDetails);
         }
+
 
         if (rows.length > 0 && displayGems) {
             display = 'block';
         }
 
         return(
-            <div className="ui segment" style={{display:`${display}`}}>
-                <div className="ui red header">Gems or Art Objects</div>
-                <table className="ui red table">
-                    <thead>
-                        <tr>
-                            <th>Quantity</th>
-                            <th>Item</th>
-                            <th>Value</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {rows}
-                    </tbody>
-                </table>
+            <div className="gems-table-content card">
+                <div className="card-title">Gems or Art Objects</div>
+                <div className="gems-table-content-items card-content">
+                    {
+                        rows.map((row, i) => {     
+                            return (
+                                <div key={i} className="gems-table-content-item card">
+                                    <div className="card-title">
+                                        <span className="item-quantity">{row.quantity}</span>
+                                        <span className="item-description">
+                                            <div>{row.value}</div>
+                                        </span>
+                                    </div>
+                                    <div className="gems-table-content-item-content card-content">
+                                        {row.description}
+                                    </div>
+                                </div> 
+                            )
+                        })
+                    }
+                </div>
             </div>
         );
     };
