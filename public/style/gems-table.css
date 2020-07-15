@@ -6,6 +6,7 @@
     width: 180px;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .gems-table-content .gems-table-content-item div:nth-child(1) {

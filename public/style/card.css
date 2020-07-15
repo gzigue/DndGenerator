@@ -55,6 +55,17 @@
     padding: 3px 7px;
 }
 
+.card .card-content-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    border: 1px solid rgba(0, 0, 0, .4);
+    border-radius: 4px;
+    padding: 3px 7px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
+}
+
 .card .card-footer-circle {
     background-color: #f1ead2;
 
@@ -72,4 +83,5 @@
     position: relative;
     top: -18px;
     font-weight: 600;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
 }

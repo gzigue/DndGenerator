@@ -27,7 +27,7 @@ class MoneyTable extends React.Component {
                         coins.map((coin, i) => {     
                             return (
                                 <div key={i} className="money-table-content-item card">
-                                    <div className="money-table-content-item-content card-content">
+                                    <div className="money-table-content-item-content card-content-item">
                                         {titles[i]}
                                     </div>
                                     <div className="card-footer-circle">{coin}</div>
