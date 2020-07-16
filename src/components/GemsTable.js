@@ -21,12 +21,13 @@ class GemsTable extends React.Component {
 
 
         if (rows.length > 0 && displayGems) {
-            display = 'block';
+            display = '';
         }
 
         return(
-            <div className="gems-table-content card"  style={{display:`${display}`}}>
-                <div className="card-title-line">Gems or Art Objects</div>
+            <div className="gems-table-content card collapsable"  style={{display:`${display}`}}>
+                <label for="gems-table-ckeck" className="card-title-line">Gems or Art Objects</label>
+                <input id="gems-table-ckeck" type="checkbox" defaultChecked></input>
                 <div className="card-content">
                     {
                         rows.map((row, i) => {     

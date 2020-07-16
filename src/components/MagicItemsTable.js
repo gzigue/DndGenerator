@@ -19,12 +19,13 @@ class MagicItemsTable extends React.Component {
         }
 
         if (rows.length > 0 && displayMagic) {
-            display = 'block';
+            display = '';
         }
 
         return(
-            <div className="magic-items-table-content card" style={{display:`${display}`}}>
-                <div className="card-title-line">Magic Items</div>
+            <div className="magic-items-table-content card collapsable" style={{display:`${display}`}}>
+            <label for="magic-items-table-ckeck" className="card-title-line">Magic Items</label>
+            <input id="magic-items-table-ckeck" type="checkbox" defaultChecked></input>
                 <div className="card-content">
                     {
                         rows.map((row, i) => {

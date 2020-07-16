@@ -17,12 +17,15 @@ class MoneyTable extends React.Component {
 
         var display='none';
         if (coins.length > 0 && level >= 0) {
-            display = 'block';
+            display = '';
         }
         
         return(
-            <div className="money-table-content card" style={{display:`${display}`}}>
-                <div className="card-title-line">Money</div>
+            <div className="money-table-content card collapsable" 
+                style={{display:`${display}`}}
+            >
+                <label for="money-table-ckeck" className="card-title-line">Money</label>
+                <input id="money-table-ckeck" type="checkbox" defaultChecked></input>
                 <div className="card-content">
                     {
                         coins.map((coin, i) => {     
@@ -32,7 +35,7 @@ class MoneyTable extends React.Component {
                                         {titles[i]}
                                     </div>
                                     <div className="card-footer-circle">{coin}</div>
-                                </div> 
+                                </div>
                             )
                         })
                     }
