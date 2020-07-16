@@ -25,7 +25,7 @@
 }
 
 .header-cards-container button:focus {
-  background-color: brown;
+  background-color: #785027;
   outline: 0 !important;
 }
 
