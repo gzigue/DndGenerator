@@ -20,7 +20,7 @@ button {
   font-size: xx-large;
   font-weight: 600;
   font-family: "Times New Roman", Times, serif;
-  width: 100px;
+  min-width: 100px;
   height: 45px;
 }
 
