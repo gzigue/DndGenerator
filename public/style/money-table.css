@@ -8,6 +8,6 @@
 .money-table-content .money-table-content-item-content {
     font-size: 18px;
     min-width: 100px;
-    min-height: 60px;
+    height: 60px;
     align-items: center;
 }

@@ -10,7 +10,6 @@
 }
 
 .gems-table-content .gems-table-content-item div:nth-child(1) {
-    align-self: center;
     padding-bottom: 10px;
     padding-top: 7px;
     font-weight: 600;

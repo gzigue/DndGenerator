@@ -13,7 +13,7 @@
   height: 100%;
 }
 
-button {
+.header-cards-container button {
   margin: 5px;
   background-color: #97663d;
   border-radius: 10px;
@@ -24,12 +24,12 @@ button {
   height: 45px;
 }
 
-button:focus {
+.header-cards-container button:focus {
   background-color: brown;
   outline: 0 !important;
 }
 
-button:hover {
+.header-cards-container button:hover {
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
