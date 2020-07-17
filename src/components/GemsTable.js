@@ -19,7 +19,6 @@ class GemsTable extends React.Component {
             rows.push(itemDetails);
         }
 
-
         if (rows.length > 0 && displayGems) {
             display = '';
         }
@@ -30,7 +29,7 @@ class GemsTable extends React.Component {
                 <input id="gems-table-ckeck" type="checkbox" defaultChecked></input>
                 <div className="card-content">
                     {
-                        rows.map((row, i) => {     
+                        rows.map((row, i) => {
                             return (
                                 <div key={i} className="card card-bordered">
                                     <div className="gems-table-content-item card-content">
@@ -42,7 +41,7 @@ class GemsTable extends React.Component {
                                         </div>
                                     </div>
                                     <div className="card-footer-circle">{row.quantity}</div>
-                                </div> 
+                                </div>
                             )
                         })
                     }
