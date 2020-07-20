@@ -674,7 +674,7 @@ class MagicItems {
 		} else if (d100 >= 79) {
 			return "Shield, +2";
 		} else if (d100 >= 78) {
-			return "Armor of resistance ("+ resistanceType() + ") (scale mail)";
+			return "Armor of resistance ("+ this.resistanceType() + ") (scale mail)";
 		} else if (d100 >= 77) {
 			return "Armor, +1 (scale mail)";
 		} else if (d100 >= 76) {
@@ -692,7 +692,7 @@ class MagicItems {
 		} else if (d100 >= 70) {
 			return "Ring of spell storing";
 		} else if (d100 >= 69) {
-			return "Ring of resistance (" + resistanceType() + ")";
+			return "Ring of resistance (" + this.resistanceType() + ")";
 		} else if (d100 >= 68) {
 			return "Ring of protection";
 		} else if (d100 >= 67) {
@@ -716,7 +716,7 @@ class MagicItems {
 		} else if (d100 >= 58) {
 			return "Mace of disruption";
 		} else if (d100 >= 57) {
-			return "Armor of resistance (" + resistanceType() + ") (leather)";
+			return "Armor of resistance (" + this.resistanceType() + ") (leather)";
 		} else if (d100 >= 56) {
 			return "Armor, + 1 (leather)";
 		} else if (d100 >= 55) {
@@ -766,9 +766,9 @@ class MagicItems {
 		} else if (d100 >= 33) {
 			return "Armor,+ 1 (chain shirt)";
 		} else if (d100 >= 32) {
-			return "Armor of resistance (" + resistanceType() + ") (chain shirt)";
+			return "Armor of resistance (" + this.resistanceType() + ") (chain shirt)";
 		} else if (d100 >= 31) {
-			return "Armor of resistance (" + resistanceType() + ") (chain mail)";
+			return "Armor of resistance (" + this.resistanceType() + ") (chain mail)";
 		} else if (d100 >= 30) {
 			return "Armor, +1 (chain mail)";
 		} else if (d100 >= 29) {
@@ -794,7 +794,7 @@ class MagicItems {
 		} else if (d100 >= 19) {
 			return "Arrow-catching shield";
 		} else if (d100 >= 18) {
-			return "Armor of vulnerability (" + this.armor() +") " + resistanceAndVulnerability();
+			return "Armor of vulnerability (" + this.armor() +") " + this.resistanceAndVulnerability();
 		} else if (d100 >= 17) {
 			return "Amulet of health";
 		} else if (d100 >= 16) {
@@ -817,11 +817,11 @@ class MagicItems {
 		} else if (d100 >= 98) {
 			return "Tome of clear thought";
 		} else if (d100 >= 97) {
-			return "Armor of resistance (" + resistanceType() + ") (studded leather)";
+			return "Armor of resistance (" + this.resistanceType() + ") (studded leather)";
 		} else if (d100 >= 96) {
 			return "Armor, + 1 studded leather";
 		} else if (d100 >= 95) {
-			return "Armor of resistance (" + resistanceType() + ") (splint)";
+			return "Armor of resistance (" + this.resistanceType() + ") (splint)";
 		} else if (d100 >= 94) {
 			return "Armor, + 1 splint";
 		} else if (d100 >= 93) {
@@ -889,7 +889,7 @@ class MagicItems {
 		} else if (d100 >= 62) {
 			return "Candle of invocation";
 		} else if (d100 >= 61) {
-			return "Armor of resistance (" + resistanceType() + ") (breastplate)";
+			return "Armor of resistance (" + this.resistanceType() + ") (breastplate)";
 		} else if (d100 >= 60) {
 			return "Armor, + 1 breastplate";
 		} else if (d100 >= 59) {
@@ -974,7 +974,7 @@ class MagicItems {
 		} else if (d100 >= 91) {
 			return "Ring of air elemental command";
 		} else if (d100 >= 90) {
-			return "Plate armor of resistance (" + resistanceType() + ")";
+			return "Plate armor of resistance (" + this.resistanceType() + ")";
 		} else if (d100 >= 89) {
 			return "Plate armor of etherealness";
 		} else if (d100 >= 88) {
@@ -988,7 +988,7 @@ class MagicItems {
 		} else if (d100 >= 84) {
 			return "Horn ofValhalla (iron)";
 		} else if (d100 >= 83) {
-			return "Armor of resistance (" + resistanceType() + ") (half plate)";
+			return "Armor of resistance (" + this.resistanceType() + ") (half plate)";
 		} else if (d100 >= 82) {
 			return "Efreeti chain";
 		} else if (d100 >= 81) {
@@ -1145,7 +1145,7 @@ class MagicItems {
 		}
 
 		for (var i = 0; resistance =! vulnerability; i++) {
-			vulnerability = vulnerability();
+			vulnerability = this.vulnerability();
 		}
 
 		return "(resistant to " + resistance + ", vulnerable to " + vulnerability + ")";
