@@ -377,7 +377,7 @@ class MagicItems {
 		} else if (d100 >= 30) {
 			return "Ammunition, +1 (" + this.ammunition() + ")";
 		} else if (d100 >= 23) {
-			return "Potion of resistance (" + resistanceType() + ")";
+			return "Potion of resistance (" + this.resistanceType() + ")";
 		} else if (d100 >= 16) {
 			return "Potion of fire breath";
 		}
@@ -794,7 +794,7 @@ class MagicItems {
 		} else if (d100 >= 19) {
 			return "Arrow-catching shield";
 		} else if (d100 >= 18) {
-			return "Armor of vulnerability (" + this.armor() +") " + this.resistanceAndVulnerability();
+			return "Armor of vulnerability " + this.resistanceAndVulnerability();
 		} else if (d100 >= 17) {
 			return "Amulet of health";
 		} else if (d100 >= 16) {
@@ -998,7 +998,7 @@ class MagicItems {
 		} else if (d100 >= 79) {
 			return "Belt of storm giant strength";
 		} else if (d100 >= 78) {
-			return "Armor of invulnerability (" + this.armor() +")";
+			return "Armor of invulnerability";
 		} else if (d100 >= 77) {
 			return "Apparatus of Kwalish";
 		} else if (d100 >= 76) {
@@ -1079,13 +1079,20 @@ class MagicItems {
 	armor() {
 		var d12 = roll.die(12);
 		
-		if (d12 >= 12) return "+3 plate";
-		else if (d12 >= 11) return "+3 half plate";
-		else if (d12 >= 9) return "+3 splint";
-		else if (d12 >= 7) return "+3 breastplate";
-		else if (d12 >= 5) return "+3 studded leather";
-		else if (d12 >= 3) return "+2 plate";
-		return "+2 half plate";
+		switch(d12) {
+			case 1: return "Padded";
+			case 2: return "Leather";
+			case 3: return "Studded leather";
+			case 4: return "Hide";
+			case 5: return "Chain shirt";
+			case 6: return "Scale mail";
+			case 7: return "Breastplate";
+			case 8: return "Half plate";
+			case 9: return "Ring mail";
+			case 10: return "Chain mail";
+			case 11: return "Splint";
+			default: return "Plate";
+		}
 	}
 
 	magicArmor() {
@@ -1139,14 +1146,18 @@ class MagicItems {
 		var vulnerability;
 
 		switch (d3) {
-			case 1: resistance = "bludgeoning";
-			case 2: resistance = "piercing";
+			case 1: 
+				resistance = "bludgeoning";
+				break;
+			case 2: 
+				resistance = "piercing";
+				break;
 			default: resistance = "slashing";
 		}
 
-		for (var i = 0; resistance =! vulnerability; i++) {
+		do {
 			vulnerability = this.vulnerability();
-		}
+		} while (resistance === vulnerability)
 
 		return "(resistant to " + resistance + ", vulnerable to " + vulnerability + ")";
 	}
@@ -1207,9 +1218,9 @@ class MagicItems {
 	
 	ammunition() {
 		var ammunitionType = [
-				"Crossbow",
-				"Bow",
-				"Blowgun"
+			"Crossbow",
+			"Bow",
+			"Blowgun"
         ];
 		var d = roll.die(ammunitionType.length)-1;
 		return ammunitionType[d];
